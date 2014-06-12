@@ -1,0 +1,541 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2E87AA0219485988000B2046 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E87AA0119485988000B2046 /* Foundation.framework */; };
+		2E87AA0419485988000B2046 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E87AA0319485988000B2046 /* CoreGraphics.framework */; };
+		2E87AA0619485988000B2046 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E87AA0519485988000B2046 /* UIKit.framework */; };
+		2E87AA0819485988000B2046 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E87AA0719485988000B2046 /* CoreData.framework */; };
+		2E87AA0E19485988000B2046 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2E87AA0C19485988000B2046 /* InfoPlist.strings */; };
+		2E87AA1019485988000B2046 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E87AA0F19485988000B2046 /* main.m */; };
+		2E87AA1419485988000B2046 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E87AA1319485988000B2046 /* AppDelegate.m */; };
+		2E87AA1719485988000B2046 /* MathTutor.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2E87AA1519485988000B2046 /* MathTutor.xcdatamodeld */; };
+		2E87AA1919485988000B2046 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E87AA1819485988000B2046 /* Images.xcassets */; };
+		2E87AA2019485988000B2046 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E87AA1F19485988000B2046 /* XCTest.framework */; };
+		2E87AA2119485988000B2046 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E87AA0119485988000B2046 /* Foundation.framework */; };
+		2E87AA2219485988000B2046 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E87AA0519485988000B2046 /* UIKit.framework */; };
+		2E87AA2319485988000B2046 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E87AA0719485988000B2046 /* CoreData.framework */; };
+		2E87AA2B19485988000B2046 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2E87AA2919485988000B2046 /* InfoPlist.strings */; };
+		2E87AA2D19485988000B2046 /* MathTutorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E87AA2C19485988000B2046 /* MathTutorTests.m */; };
+		2E87AA3C1948BFAB000B2046 /* RootVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E87AA3B1948BFAB000B2046 /* RootVC.m */; };
+		2E87AA3F1948BFB7000B2046 /* BlankVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E87AA3E1948BFB7000B2046 /* BlankVC.m */; };
+		2E87AA421948E4A1000B2046 /* VCTransitionAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E87AA411948E4A1000B2046 /* VCTransitionAnimator.m */; };
+		2EA0C2F1194A02B600D4F97D /* ZZTimerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EA0C2F0194A02B600D4F97D /* ZZTimerView.m */; };
+		2EA0C2F5194A0A1800D4F97D /* ZZTimerLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EA0C2F4194A0A1800D4F97D /* ZZTimerLayer.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2E87AA2419485988000B2046 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2E87A9F619485988000B2046 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2E87A9FD19485988000B2046;
+			remoteInfo = MathTutor;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2E87A9FE19485988000B2046 /* MathTutor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MathTutor.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E87AA0119485988000B2046 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		2E87AA0319485988000B2046 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		2E87AA0519485988000B2046 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		2E87AA0719485988000B2046 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		2E87AA0B19485988000B2046 /* MathTutor-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MathTutor-Info.plist"; sourceTree = "<group>"; };
+		2E87AA0D19485988000B2046 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		2E87AA0F19485988000B2046 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2E87AA1119485988000B2046 /* MathTutor-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MathTutor-Prefix.pch"; sourceTree = "<group>"; };
+		2E87AA1219485988000B2046 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		2E87AA1319485988000B2046 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		2E87AA1619485988000B2046 /* MathTutor.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MathTutor.xcdatamodel; sourceTree = "<group>"; };
+		2E87AA1819485988000B2046 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		2E87AA1E19485988000B2046 /* MathTutorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MathTutorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E87AA1F19485988000B2046 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		2E87AA2819485988000B2046 /* MathTutorTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MathTutorTests-Info.plist"; sourceTree = "<group>"; };
+		2E87AA2A19485988000B2046 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		2E87AA2C19485988000B2046 /* MathTutorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MathTutorTests.m; sourceTree = "<group>"; };
+		2E87AA3A1948BFAB000B2046 /* RootVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RootVC.h; path = Controllers/RootVC.h; sourceTree = "<group>"; };
+		2E87AA3B1948BFAB000B2046 /* RootVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RootVC.m; path = Controllers/RootVC.m; sourceTree = "<group>"; };
+		2E87AA3D1948BFB7000B2046 /* BlankVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BlankVC.h; path = Controllers/BlankVC.h; sourceTree = "<group>"; };
+		2E87AA3E1948BFB7000B2046 /* BlankVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BlankVC.m; path = Controllers/BlankVC.m; sourceTree = "<group>"; };
+		2E87AA401948E4A1000B2046 /* VCTransitionAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VCTransitionAnimator.h; path = Controllers/VCTransitions/VCTransitionAnimator.h; sourceTree = "<group>"; };
+		2E87AA411948E4A1000B2046 /* VCTransitionAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VCTransitionAnimator.m; path = Controllers/VCTransitions/VCTransitionAnimator.m; sourceTree = "<group>"; };
+		2EA0C2EF194A02B600D4F97D /* ZZTimerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZZTimerView.h; path = Views/ZZTimerView.h; sourceTree = "<group>"; };
+		2EA0C2F0194A02B600D4F97D /* ZZTimerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZZTimerView.m; path = Views/ZZTimerView.m; sourceTree = "<group>"; };
+		2EA0C2F3194A0A1800D4F97D /* ZZTimerLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZZTimerLayer.h; path = Views/Layers/ZZTimerLayer.h; sourceTree = "<group>"; };
+		2EA0C2F4194A0A1800D4F97D /* ZZTimerLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZZTimerLayer.m; path = Views/Layers/ZZTimerLayer.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2E87A9FB19485988000B2046 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E87AA0419485988000B2046 /* CoreGraphics.framework in Frameworks */,
+				2E87AA0819485988000B2046 /* CoreData.framework in Frameworks */,
+				2E87AA0619485988000B2046 /* UIKit.framework in Frameworks */,
+				2E87AA0219485988000B2046 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2E87AA1B19485988000B2046 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E87AA2019485988000B2046 /* XCTest.framework in Frameworks */,
+				2E87AA2319485988000B2046 /* CoreData.framework in Frameworks */,
+				2E87AA2219485988000B2046 /* UIKit.framework in Frameworks */,
+				2E87AA2119485988000B2046 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2E87A9F519485988000B2046 = {
+			isa = PBXGroup;
+			children = (
+				2E87AA0919485988000B2046 /* MathTutor */,
+				2E87AA2619485988000B2046 /* MathTutorTests */,
+				2E87AA0019485988000B2046 /* Frameworks */,
+				2E87A9FF19485988000B2046 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2E87A9FF19485988000B2046 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2E87A9FE19485988000B2046 /* MathTutor.app */,
+				2E87AA1E19485988000B2046 /* MathTutorTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2E87AA0019485988000B2046 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2E87AA0119485988000B2046 /* Foundation.framework */,
+				2E87AA0319485988000B2046 /* CoreGraphics.framework */,
+				2E87AA0519485988000B2046 /* UIKit.framework */,
+				2E87AA0719485988000B2046 /* CoreData.framework */,
+				2E87AA1F19485988000B2046 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2E87AA0919485988000B2046 /* MathTutor */ = {
+			isa = PBXGroup;
+			children = (
+				2EA0C2F2194A02BE00D4F97D /* Views */,
+				2E87AA3919485E48000B2046 /* Controllers */,
+				2E87AA1219485988000B2046 /* AppDelegate.h */,
+				2E87AA1319485988000B2046 /* AppDelegate.m */,
+				2E87AA1819485988000B2046 /* Images.xcassets */,
+				2E87AA1519485988000B2046 /* MathTutor.xcdatamodeld */,
+				2E87AA0A19485988000B2046 /* Supporting Files */,
+			);
+			path = MathTutor;
+			sourceTree = "<group>";
+		};
+		2E87AA0A19485988000B2046 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2E87AA0B19485988000B2046 /* MathTutor-Info.plist */,
+				2E87AA0C19485988000B2046 /* InfoPlist.strings */,
+				2E87AA0F19485988000B2046 /* main.m */,
+				2E87AA1119485988000B2046 /* MathTutor-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2E87AA2619485988000B2046 /* MathTutorTests */ = {
+			isa = PBXGroup;
+			children = (
+				2E87AA2C19485988000B2046 /* MathTutorTests.m */,
+				2E87AA2719485988000B2046 /* Supporting Files */,
+			);
+			path = MathTutorTests;
+			sourceTree = "<group>";
+		};
+		2E87AA2719485988000B2046 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2E87AA2819485988000B2046 /* MathTutorTests-Info.plist */,
+				2E87AA2919485988000B2046 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2E87AA3919485E48000B2046 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				2E87AA431948E4A5000B2046 /* VCTransitions */,
+				2E87AA3A1948BFAB000B2046 /* RootVC.h */,
+				2E87AA3B1948BFAB000B2046 /* RootVC.m */,
+				2E87AA3D1948BFB7000B2046 /* BlankVC.h */,
+				2E87AA3E1948BFB7000B2046 /* BlankVC.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		2E87AA431948E4A5000B2046 /* VCTransitions */ = {
+			isa = PBXGroup;
+			children = (
+				2E87AA401948E4A1000B2046 /* VCTransitionAnimator.h */,
+				2E87AA411948E4A1000B2046 /* VCTransitionAnimator.m */,
+			);
+			name = VCTransitions;
+			sourceTree = "<group>";
+		};
+		2EA0C2F2194A02BE00D4F97D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2EA0C2F6194A0A1B00D4F97D /* Layers */,
+				2EA0C2EF194A02B600D4F97D /* ZZTimerView.h */,
+				2EA0C2F0194A02B600D4F97D /* ZZTimerView.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		2EA0C2F6194A0A1B00D4F97D /* Layers */ = {
+			isa = PBXGroup;
+			children = (
+				2EA0C2F3194A0A1800D4F97D /* ZZTimerLayer.h */,
+				2EA0C2F4194A0A1800D4F97D /* ZZTimerLayer.m */,
+			);
+			name = Layers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2E87A9FD19485988000B2046 /* MathTutor */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2E87AA3019485988000B2046 /* Build configuration list for PBXNativeTarget "MathTutor" */;
+			buildPhases = (
+				2E87A9FA19485988000B2046 /* Sources */,
+				2E87A9FB19485988000B2046 /* Frameworks */,
+				2E87A9FC19485988000B2046 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MathTutor;
+			productName = MathTutor;
+			productReference = 2E87A9FE19485988000B2046 /* MathTutor.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2E87AA1D19485988000B2046 /* MathTutorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2E87AA3319485988000B2046 /* Build configuration list for PBXNativeTarget "MathTutorTests" */;
+			buildPhases = (
+				2E87AA1A19485988000B2046 /* Sources */,
+				2E87AA1B19485988000B2046 /* Frameworks */,
+				2E87AA1C19485988000B2046 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2E87AA2519485988000B2046 /* PBXTargetDependency */,
+			);
+			name = MathTutorTests;
+			productName = MathTutorTests;
+			productReference = 2E87AA1E19485988000B2046 /* MathTutorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2E87A9F619485988000B2046 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = morganwilde;
+				TargetAttributes = {
+					2E87AA1D19485988000B2046 = {
+						TestTargetID = 2E87A9FD19485988000B2046;
+					};
+				};
+			};
+			buildConfigurationList = 2E87A9F919485988000B2046 /* Build configuration list for PBXProject "MathTutor" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 2E87A9F519485988000B2046;
+			productRefGroup = 2E87A9FF19485988000B2046 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2E87A9FD19485988000B2046 /* MathTutor */,
+				2E87AA1D19485988000B2046 /* MathTutorTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2E87A9FC19485988000B2046 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E87AA0E19485988000B2046 /* InfoPlist.strings in Resources */,
+				2E87AA1919485988000B2046 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2E87AA1C19485988000B2046 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E87AA2B19485988000B2046 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2E87A9FA19485988000B2046 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E87AA3F1948BFB7000B2046 /* BlankVC.m in Sources */,
+				2E87AA3C1948BFAB000B2046 /* RootVC.m in Sources */,
+				2E87AA421948E4A1000B2046 /* VCTransitionAnimator.m in Sources */,
+				2EA0C2F5194A0A1800D4F97D /* ZZTimerLayer.m in Sources */,
+				2E87AA1419485988000B2046 /* AppDelegate.m in Sources */,
+				2E87AA1719485988000B2046 /* MathTutor.xcdatamodeld in Sources */,
+				2E87AA1019485988000B2046 /* main.m in Sources */,
+				2EA0C2F1194A02B600D4F97D /* ZZTimerView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2E87AA1A19485988000B2046 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E87AA2D19485988000B2046 /* MathTutorTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2E87AA2519485988000B2046 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2E87A9FD19485988000B2046 /* MathTutor */;
+			targetProxy = 2E87AA2419485988000B2046 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2E87AA0C19485988000B2046 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2E87AA0D19485988000B2046 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		2E87AA2919485988000B2046 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2E87AA2A19485988000B2046 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2E87AA2E19485988000B2046 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2E87AA2F19485988000B2046 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2E87AA3119485988000B2046 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MathTutor/MathTutor-Prefix.pch";
+				INFOPLIST_FILE = "MathTutor/MathTutor-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		2E87AA3219485988000B2046 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MathTutor/MathTutor-Prefix.pch";
+				INFOPLIST_FILE = "MathTutor/MathTutor-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		2E87AA3419485988000B2046 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MathTutor.app/MathTutor";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MathTutor/MathTutor-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "MathTutorTests/MathTutorTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		2E87AA3519485988000B2046 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MathTutor.app/MathTutor";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MathTutor/MathTutor-Prefix.pch";
+				INFOPLIST_FILE = "MathTutorTests/MathTutorTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2E87A9F919485988000B2046 /* Build configuration list for PBXProject "MathTutor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2E87AA2E19485988000B2046 /* Debug */,
+				2E87AA2F19485988000B2046 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2E87AA3019485988000B2046 /* Build configuration list for PBXNativeTarget "MathTutor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2E87AA3119485988000B2046 /* Debug */,
+				2E87AA3219485988000B2046 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2E87AA3319485988000B2046 /* Build configuration list for PBXNativeTarget "MathTutorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2E87AA3419485988000B2046 /* Debug */,
+				2E87AA3519485988000B2046 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		2E87AA1519485988000B2046 /* MathTutor.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				2E87AA1619485988000B2046 /* MathTutor.xcdatamodel */,
+			);
+			currentVersion = 2E87AA1619485988000B2046 /* MathTutor.xcdatamodel */;
+			path = MathTutor.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 2E87A9F619485988000B2046 /* Project object */;
+}
