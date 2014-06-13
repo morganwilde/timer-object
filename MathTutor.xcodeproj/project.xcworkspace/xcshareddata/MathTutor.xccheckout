@@ -5,36 +5,36 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>8CECAEB0-3617-4484-AEDF-E460AF80A8A7</string>
+	<string>627C16FD-1C2A-4F36-8E8E-9E14D0BA4223</string>
 	<key>IDESourceControlProjectName</key>
 	<string>MathTutor</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>053092F7-7F8F-4FC2-A4A8-88D9C0B1C5E1</key>
-		<string>ssh://bitbucket.org/zzish/virtualtutor-ios.git</string>
+		<key>F9E5DA33-94F4-47EA-8E12-9AF651D77D0F</key>
+		<string>ssh://github.com/morganwilde/timer-object.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>MathTutor/MathTutor.xcodeproj/project.xcworkspace</string>
+	<string>MathTutor.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>053092F7-7F8F-4FC2-A4A8-88D9C0B1C5E1</key>
-		<string>../../..</string>
+		<key>F9E5DA33-94F4-47EA-8E12-9AF651D77D0F</key>
+		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>ssh://bitbucket.org/zzish/virtualtutor-ios.git</string>
+	<string>ssh://github.com/morganwilde/timer-object.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>053092F7-7F8F-4FC2-A4A8-88D9C0B1C5E1</string>
+	<string>F9E5DA33-94F4-47EA-8E12-9AF651D77D0F</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>053092F7-7F8F-4FC2-A4A8-88D9C0B1C5E1</string>
+			<string>F9E5DA33-94F4-47EA-8E12-9AF651D77D0F</string>
 			<key>IDESourceControlWCCName</key>
-			<string>VirtualTutor</string>
+			<string>MathTutor</string>
 		</dict>
 	</array>
 </dict>

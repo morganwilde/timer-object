@@ -10,17 +10,20 @@
 
 @interface ZZTimerView : UIView
 
-
+@property (nonatomic) double timerDuration;
 @property (nonatomic) double duration;
 @property (strong, nonatomic) UIColor *timerColor;
 @property (nonatomic, copy) void (^callback)();
+@property (nonatomic, getter = isStopped) BOOL stopped;
 
 // Designated initialiser
 - (instancetype)initWithFrame:(CGRect)frame color:(UIColor *)color;
 - (instancetype)initWithFrame:(CGRect)frame color:(UIColor *)color withCallback:(void (^)(void))callback;
 // Begin timer animation takes takes duration seconds
-- (void)timerBeginWithDuration:(CGFloat)duration;
+- (void)timerBeginWithDuration:(double)duration;
 // Stop timer
 - (double)timerStop;
+// Reset timer
+- (void)timerReset;
 
 @end

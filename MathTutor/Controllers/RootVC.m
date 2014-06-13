@@ -24,17 +24,17 @@
     view.backgroundColor = [UIColor grayColor];
     view.userInteractionEnabled = YES;
     
-    CGFloat width = 50;
+    CGFloat width = 300;
     CGRect frameTimer = CGRectMake(frameView.size.width/2.0 - width/2.0,
                                    frameView.size.height/2.0 - width/2.0,
                                    width,
                                    width);
-    self.timerView = [[ZZTimerView alloc] initWithFrame:frameTimer color:[UIColor brownColor] withCallback:^{
+    self.timerView = [[ZZTimerView alloc] initWithFrame:frameTimer color:[UIColor orangeColor] withCallback:^{
         [self timerStopped];
     }];
     [view addSubview:self.timerView];
     
-    [self.timerView timerBeginWithDuration:10.0];
+    [self.timerView timerBeginWithDuration:5.0];
     
     self.view = view;
 }
@@ -46,8 +46,11 @@
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
     [super touchesBegan:touches withEvent:event];
-    [self.timerView timerStop];
-    
+    if (!self.timerView.stopped) {
+        [self.timerView timerStop];
+    } else {
+        [self.timerView timerReset];
+    }
 }
 - (void)timerStopped
 {

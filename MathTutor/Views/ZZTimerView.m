@@ -31,6 +31,7 @@
         self.endAngleFinal = M_PI*2;
         self.endAngle = self.endAngleInitial;
         self.timerColor = color;
+        self.stopped = YES;
         
         [self.layer addSublayer:self.backgroundLayer];
         [self.backgroundLayer setNeedsDisplay];
@@ -67,8 +68,10 @@
     self.backgroundLayer.timerColor = _timerColor;
 }
 #pragma mark - Animation start/stop
-- (void)timerBeginWithDuration:(CGFloat)duration
+- (void)timerBeginWithDuration:(double)duration
 {
+    self.timerDuration = duration;
+    self.stopped = NO;
     CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"endAngle"];
     animation.duration = duration;
     animation.fromValue = [NSNumber numberWithDouble:self.endAngleInitial];
@@ -77,11 +80,11 @@
     animation.removedOnCompletion = NO;
     animation.delegate = self;
     
-    
     [self.backgroundLayer addAnimation:animation forKey:@"endAngle"];
 }
 - (double)timerStop
 {
+    self.stopped = YES;
     CFTimeInterval pausedTime = [self.backgroundLayer convertTime:CACurrentMediaTime() fromLayer:self.layer];
     self.backgroundLayer.speed = 0.0;
     self.backgroundLayer.timeOffset = pausedTime;
@@ -93,6 +96,19 @@
     
     return self.duration;
 }
+- (void)timerReset
+{
+    self.backgroundLayer.speed = 1.0;
+    self.backgroundLayer.timeOffset = 0.0;
+    self.backgroundLayer.beginTime = 0.0;
+    // Paused
+    //self.backgroundLayer.beginTime = [self.backgroundLayer convertTime:CACurrentMediaTime() fromLayer:nil] - self.stopedTime;
+    self.endAngle = self.endAngleInitial;
+    self.startedTime = 0;
+    self.stopedTime = 0;
+    self.duration = 0;
+    [self timerBeginWithDuration:self.timerDuration];
+}
 #pragma mark - Animation events
 - (void)animationDidStart:(CAAnimation *)anim
 {
@@ -100,10 +116,8 @@
 }
 - (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag
 {
-    self.stopedTime = CACurrentMediaTime();
-    self.duration = self.stopedTime - self.startedTime;
-    if (self.callback) {
-        self.callback();
+    if (flag) {
+        [self timerStop];
     }
 }
 
