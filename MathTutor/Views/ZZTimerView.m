@@ -8,6 +8,7 @@
 
 #import "ZZTimerView.h"
 #import "Layers/ZZTimerLayer.h"
+//#import "View/Abstractions/UIViewAbstraction.h"
 
 @interface ZZTimerView()
 
@@ -17,6 +18,8 @@
 @property (nonatomic) float endAngle;
 @property (nonatomic) float endAngleInitial;
 @property (nonatomic) float endAngleFinal;
+@property (nonatomic) UIColor *timerColorPermanent;
+@property (nonatomic) CGAffineTransform transformCurrent;
 
 @end
 
@@ -31,7 +34,9 @@
         self.endAngleFinal = M_PI*2;
         self.endAngle = self.endAngleInitial;
         self.timerColor = color;
+        self.timerColorPermanent = color;
         self.stopped = YES;
+        self.transformCurrent = self.transform;
         
         [self.layer addSublayer:self.backgroundLayer];
         [self.backgroundLayer setNeedsDisplay];
@@ -72,6 +77,7 @@
 {
     self.timerDuration = duration;
     self.stopped = NO;
+    self.timerColor = self.timerColorPermanent;
     CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"endAngle"];
     animation.duration = duration;
     animation.fromValue = [NSNumber numberWithDouble:self.endAngleInitial];
@@ -93,8 +99,30 @@
     if (self.callback) {
         self.callback();
     }
+    [UIView animateWithDuration:2 delay:0.0 usingSpringWithDamping:0.25 initialSpringVelocity:0.25 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+        self.transform = CGAffineTransformScale(self.transformCurrent, 1.5, 1.5);
+    } completion:^(BOOL finished){
+        [UIView animateWithDuration:0.5 delay:0.0 usingSpringWithDamping:0.25 initialSpringVelocity:0.25 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+            self.transform = self.transformCurrent;
+        } completion:^(BOOL finished){
+            
+        }];
+    }];
     
     return self.duration;
+}
+- (double)timerStopAnswer:(BOOL)correct
+{
+    if (correct) {
+        self.backgroundLayer.timerColor = [UIColor greenColor];//[UIViewAbstraction colorGood];
+    } else {
+        self.backgroundLayer.timerColor = [UIColor redColor];//[UIViewAbstraction colorBad];
+    }
+    return [self timerStop];
+}
+- (void)timerStopHard
+{
+    [self.layer removeAllAnimations];
 }
 - (void)timerReset
 {
@@ -117,7 +145,7 @@
 - (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag
 {
     if (flag) {
-        [self timerStop];
+        [self timerStopAnswer:NO];
     }
 }
 

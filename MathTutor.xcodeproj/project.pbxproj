@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E04898F194B2494007269E3 /* Video.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E04898E194B2494007269E3 /* Video.m */; };
+		2E048992194B24CE007269E3 /* Question.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E048991194B24CE007269E3 /* Question.m */; };
+		2E048995194B259D007269E3 /* Action.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E048994194B259D007269E3 /* Action.m */; };
+		2E048998194B2EBA007269E3 /* Activity.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E048997194B2EBA007269E3 /* Activity.m */; };
 		2E87AA0219485988000B2046 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E87AA0119485988000B2046 /* Foundation.framework */; };
 		2E87AA0419485988000B2046 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E87AA0319485988000B2046 /* CoreGraphics.framework */; };
 		2E87AA0619485988000B2046 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E87AA0519485988000B2046 /* UIKit.framework */; };
@@ -40,6 +44,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2E04898D194B2494007269E3 /* Video.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Video.h; sourceTree = "<group>"; };
+		2E04898E194B2494007269E3 /* Video.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Video.m; sourceTree = "<group>"; };
+		2E048990194B24CE007269E3 /* Question.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Question.h; sourceTree = "<group>"; };
+		2E048991194B24CE007269E3 /* Question.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Question.m; sourceTree = "<group>"; };
+		2E048993194B259D007269E3 /* Action.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Action.h; sourceTree = "<group>"; };
+		2E048994194B259D007269E3 /* Action.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Action.m; sourceTree = "<group>"; };
+		2E048996194B2EBA007269E3 /* Activity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Activity.h; sourceTree = "<group>"; };
+		2E048997194B2EBA007269E3 /* Activity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Activity.m; sourceTree = "<group>"; };
 		2E87A9FE19485988000B2046 /* MathTutor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MathTutor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E87AA0119485988000B2046 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		2E87AA0319485988000B2046 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -134,9 +146,17 @@
 				2E87AA3919485E48000B2046 /* Controllers */,
 				2E87AA1219485988000B2046 /* AppDelegate.h */,
 				2E87AA1319485988000B2046 /* AppDelegate.m */,
+				2E04898D194B2494007269E3 /* Video.h */,
+				2E04898E194B2494007269E3 /* Video.m */,
+				2E048993194B259D007269E3 /* Action.h */,
+				2E048994194B259D007269E3 /* Action.m */,
+				2E048990194B24CE007269E3 /* Question.h */,
+				2E048991194B24CE007269E3 /* Question.m */,
 				2E87AA1819485988000B2046 /* Images.xcassets */,
 				2E87AA1519485988000B2046 /* MathTutor.xcdatamodeld */,
 				2E87AA0A19485988000B2046 /* Supporting Files */,
+				2E048996194B2EBA007269E3 /* Activity.h */,
+				2E048997194B2EBA007269E3 /* Activity.m */,
 			);
 			path = MathTutor;
 			sourceTree = "<group>";
@@ -308,10 +328,14 @@
 				2E87AA3F1948BFB7000B2046 /* BlankVC.m in Sources */,
 				2E87AA3C1948BFAB000B2046 /* RootVC.m in Sources */,
 				2E87AA421948E4A1000B2046 /* VCTransitionAnimator.m in Sources */,
+				2E04898F194B2494007269E3 /* Video.m in Sources */,
 				2EA0C2F5194A0A1800D4F97D /* ZZTimerLayer.m in Sources */,
 				2E87AA1419485988000B2046 /* AppDelegate.m in Sources */,
 				2E87AA1719485988000B2046 /* MathTutor.xcdatamodeld in Sources */,
+				2E048995194B259D007269E3 /* Action.m in Sources */,
+				2E048992194B24CE007269E3 /* Question.m in Sources */,
 				2E87AA1019485988000B2046 /* main.m in Sources */,
+				2E048998194B2EBA007269E3 /* Activity.m in Sources */,
 				2EA0C2F1194A02B600D4F97D /* ZZTimerView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <QuartzCore/QuartzCore.h>
 
 @interface ZZTimerView : UIView
 
@@ -23,6 +24,10 @@
 - (void)timerBeginWithDuration:(double)duration;
 // Stop timer
 - (double)timerStop;
+// Stop timer with color
+- (double)timerStopAnswer:(BOOL)correct;
+// Stop all animations abruptly
+- (void)timerStopHard;
 // Reset timer
 - (void)timerReset;
 

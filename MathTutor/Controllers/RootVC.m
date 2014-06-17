@@ -24,7 +24,7 @@
     view.backgroundColor = [UIColor grayColor];
     view.userInteractionEnabled = YES;
     
-    CGFloat width = 300;
+    CGFloat width = 200;
     CGRect frameTimer = CGRectMake(frameView.size.width/2.0 - width/2.0,
                                    frameView.size.height/2.0 - width/2.0,
                                    width,
@@ -34,7 +34,7 @@
     }];
     [view addSubview:self.timerView];
     
-    [self.timerView timerBeginWithDuration:5.0];
+    [self.timerView timerBeginWithDuration:2.0];
     
     self.view = view;
 }
@@ -47,7 +47,8 @@
 {
     [super touchesBegan:touches withEvent:event];
     if (!self.timerView.stopped) {
-        [self.timerView timerStop];
+        [self.timerView timerStopAnswer:NO];
+        //[self.timerView timerStopHard];
     } else {
         [self.timerView timerReset];
     }
