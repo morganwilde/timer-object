@@ -34,8 +34,8 @@
     }];
     [view addSubview:self.timerView];
     
-    //[self.timerView timerBeginWithDuration:2.0];
-    [self.timerView timerBeginWithDuration:2.0 andStop:1.5 with:NO];
+    [self.timerView timerBeginWithDuration:1.0];
+    //[self.timerView timerBeginWithDuration:2.0 andStop:1.5 with:NO];
     
     self.view = view;
 }
@@ -52,7 +52,10 @@
         //[self.timerView timerStopAnswer:NO];
         //[self.timerView timerStopHard];
     } else {
-        [self.timerView timerReset];
+        [self.timerView timerStoppedShowAnswer:NO];
+        //[self.timerView timerStopAnswer:YES andReadjustTo:1.0];
+        //self.timerView timerStopAnswer:YES];
+        //[self.timerView timerReset];
     }
 }
 - (void)timerStopped

@@ -30,6 +30,8 @@
 - (double)timerStopAnswer:(BOOL)correct;
 // Stop timer with color and readjust to the given time
 - (double)timerStopAnswer:(BOOL)correct andReadjustTo:(double)timer;
+// Timer ran out and then user posted answer
+- (void)timerStoppedShowAnswer:(BOOL)correct;
 // Stop all animations abruptly
 - (void)timerStopHard;
 // Reset timer

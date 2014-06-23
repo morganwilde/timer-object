@@ -130,7 +130,7 @@
 }
 - (double)timerStopAnswer:(BOOL)correct
 {
-    if (!self.isReadjusted) {
+    if (!self.isReadjusted || self.stopped) {
         if (correct) {
             self.backgroundLayer.timerColor = [UIColor greenColor];//[UIViewAbstraction colorGood];
         } else {
@@ -171,6 +171,10 @@
     [self animateTimerBlowUp];
     
     return timer;
+}
+- (void)timerStoppedShowAnswer:(BOOL)correct
+{
+    [self timerStopAnswer:correct andReadjustTo:self.timerDuration];
 }
 - (void)timerStopHard
 {
