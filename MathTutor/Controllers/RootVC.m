@@ -34,7 +34,8 @@
     }];
     [view addSubview:self.timerView];
     
-    [self.timerView timerBeginWithDuration:2.0];
+    //[self.timerView timerBeginWithDuration:2.0];
+    [self.timerView timerBeginWithDuration:2.0 andStop:1.5 with:NO];
     
     self.view = view;
 }
@@ -47,7 +48,8 @@
 {
     [super touchesBegan:touches withEvent:event];
     if (!self.timerView.stopped) {
-        [self.timerView timerStopAnswer:NO];
+        [self.timerView timerStopAnswer:YES andReadjustTo:0.25];
+        //[self.timerView timerStopAnswer:NO];
         //[self.timerView timerStopHard];
     } else {
         [self.timerView timerReset];

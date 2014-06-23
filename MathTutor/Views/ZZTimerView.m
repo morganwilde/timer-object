@@ -7,7 +7,7 @@
 //
 
 #import "ZZTimerView.h"
-#import "Layers/ZZTimerLayer.h"
+#import "ZZTimerLayer.h"
 //#import "View/Abstractions/UIViewAbstraction.h"
 
 @interface ZZTimerView()
@@ -20,6 +20,9 @@
 @property (nonatomic) float endAngleFinal;
 @property (nonatomic) UIColor *timerColorPermanent;
 @property (nonatomic) CGAffineTransform transformCurrent;
+@property (strong, nonatomic) NSInvocation *invocation;
+@property (strong, nonatomic) NSMethodSignature *signature;
+@property (nonatomic, getter = isReadjusted) BOOL readjusted;
 
 @end
 
@@ -88,6 +91,16 @@
     
     [self.backgroundLayer addAnimation:animation forKey:@"endAngle"];
 }
+- (void)timerBeginWithDuration:(double)duration andStop:(double)after with:(BOOL)answer
+{
+    [self timerBeginWithDuration:duration];
+    self.signature = [[self class] instanceMethodSignatureForSelector:@selector(timerStopAnswer:)];
+    self.invocation = [NSInvocation invocationWithMethodSignature:self.signature];
+    [self.invocation setSelector:@selector(timerStopAnswer:)];
+    [self.invocation setTarget:self];
+    [self.invocation setArgument:&answer atIndex:2];
+    [self.invocation performSelector:@selector(invokeWithTarget:) withObject:self afterDelay:after];
+}
 - (double)timerStop
 {
     self.stopped = YES;
@@ -99,6 +112,12 @@
     if (self.callback) {
         self.callback();
     }
+    [self animateTimerBlowUp];
+    
+    return self.duration;
+}
+- (void)animateTimerBlowUp
+{
     [UIView animateWithDuration:2 delay:0.0 usingSpringWithDamping:0.25 initialSpringVelocity:0.25 options:UIViewAnimationOptionCurveEaseInOut animations:^{
         self.transform = CGAffineTransformScale(self.transformCurrent, 1.5, 1.5);
     } completion:^(BOOL finished){
@@ -108,17 +127,50 @@
             
         }];
     }];
-    
-    return self.duration;
 }
 - (double)timerStopAnswer:(BOOL)correct
 {
+    if (!self.isReadjusted) {
+        if (correct) {
+            self.backgroundLayer.timerColor = [UIColor greenColor];//[UIViewAbstraction colorGood];
+        } else {
+            self.backgroundLayer.timerColor = [UIColor redColor];//[UIViewAbstraction colorBad];
+        }
+        return [self timerStop];
+    }
+    return self.duration;
+}
+- (double)timerStopAnswer:(BOOL)correct andReadjustTo:(double)timer
+{
+    // Readjust to the timer
+    self.stopped = YES;
+    self.readjusted = YES;
+    CFTimeInterval pausedTime = [self.backgroundLayer convertTime:CACurrentMediaTime() fromLayer:self.layer];
+    self.backgroundLayer.speed = 1.0;
+    self.backgroundLayer.timeOffset = pausedTime;
+    self.stopedTime = pausedTime;
+    self.duration = self.stopedTime - self.startedTime;
+    
+    float startAngle = self.duration/self.timerDuration * self.endAngleFinal;
+    float endAngle = timer/self.timerDuration * self.endAngleFinal;
+    
+    CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"endAngle"];
+    animation.duration = 0.25;
+    animation.fromValue = [NSNumber numberWithDouble:startAngle];
+    animation.toValue = [NSNumber numberWithDouble:endAngle];
+    animation.fillMode = kCAFillModeForwards;
+    animation.removedOnCompletion = NO;
+    animation.delegate = self;
+    
+    [self.backgroundLayer addAnimation:animation forKey:@"endAngle"];
     if (correct) {
         self.backgroundLayer.timerColor = [UIColor greenColor];//[UIViewAbstraction colorGood];
     } else {
         self.backgroundLayer.timerColor = [UIColor redColor];//[UIViewAbstraction colorBad];
     }
-    return [self timerStop];
+    [self animateTimerBlowUp];
+    
+    return timer;
 }
 - (void)timerStopHard
 {
@@ -144,8 +196,9 @@
 }
 - (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag
 {
-    if (flag) {
-        [self timerStopAnswer:NO];
+    if (flag && !self.isReadjusted) {
+        [self timerStop];
+        //[self timerStopAnswer:NO]; // Changed because this when the timer runs out there is no default color;
     }
 }
 

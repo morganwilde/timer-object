@@ -22,10 +22,14 @@
 - (instancetype)initWithFrame:(CGRect)frame color:(UIColor *)color withCallback:(void (^)(void))callback;
 // Begin timer animation takes takes duration seconds
 - (void)timerBeginWithDuration:(double)duration;
+// Begin timer animation with auto stop
+- (void)timerBeginWithDuration:(double)duration andStop:(double)after with:(BOOL)answer;
 // Stop timer
 - (double)timerStop;
 // Stop timer with color
 - (double)timerStopAnswer:(BOOL)correct;
+// Stop timer with color and readjust to the given time
+- (double)timerStopAnswer:(BOOL)correct andReadjustTo:(double)timer;
 // Stop all animations abruptly
 - (void)timerStopHard;
 // Reset timer
